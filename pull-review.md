@@ -1,6 +1,6 @@
 # Pull Request Review Tracker
 
-Track the status of open PRs in `collab-frame` as of 2025-05-05.
+Track the status of open PRs in `collab-frame` as of the current date.
 
 ---
 
