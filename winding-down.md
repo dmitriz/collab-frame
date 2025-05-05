@@ -13,7 +13,7 @@ Use this when you feel your session is getting too long, or you’re losing mome
 
 ## Close Loop
 6. Commit or save all open files
-7. Leave a note in `plan-now.md` about what you’ll do next
+7. Leave a note in `plan-now.md` (or your preferred planning document) about what you'll do next
 8. Close the tab. Walk away. Session done, intentionally.
 
 > The goal isn’t to stop working — it’s to build trust that you can stop and pick back up smoothly.
