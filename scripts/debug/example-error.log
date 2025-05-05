@@ -1,0 +1,5 @@
+// Paste any script output or error trace here for assistant analysis.
+
+TypeError: Cannot read property 'database_id' of undefined
+  at Object.main (init-notion-api.js:15:22)
+  at run (runner.js:3:10)
