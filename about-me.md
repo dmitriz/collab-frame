@@ -15,4 +15,4 @@ This file captures my working style, collaboration preferences, and intentional 
 - Trust assistant judgment to generate/update files without prompt
 - Treat chat as a log of context, not a source of actionable state
 
-> This file may update at any time without approval loop
+> This file may be updated by me at any time without requiring an approval process
