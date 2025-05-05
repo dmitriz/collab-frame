@@ -1,0 +1,5 @@
+// Captured script error (replace with real output on failure)
+
+TypeError: Cannot read property 'database_id' of undefined
+  at Object.main (init-notion-api.js:15:22)
+  at run (runner.js:3:10)
