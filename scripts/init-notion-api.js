@@ -17,4 +17,7 @@ fetch('https://api.notion.com/v1/pages', {
       title: [ { text: { content: "Hello from agent!" } } ]
     }
   })
-}).then(res => res.json()).then(console.log);
+}).then(res => {
+  if (!res.ok) throw new Error('Network response was not ok');
+  return res.json();
+}).then(console.log).catch(error => console.error('Notion API error:', error));
