@@ -13,7 +13,7 @@ A quick mental macro to restore focus when you feel scattered, overstimulated, o
 3. Run `plan-now.md` or `pause` explicitly
 
 ## If You’re Still Blocked
-- Run the `winding-down.md` sequence
-- Push a `recovery-note.md` with context loss summary
+- Run the [winding-down.md](winding-down.md) sequence
+- Push a [recovery-note.md](recovery-note.md) with context loss summary
 
 > This is not motivational, it’s procedural resilience
