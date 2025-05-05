@@ -19,6 +19,6 @@ node scripts/init-example.js
 ## Errors
 - Failures log to `debug/error-*.log`
 - Read stack trace, look for missing files/or inputs
-- Copy log to `copilot-errors.md` for triage
+- Copy log to `debug/copilot-errors.md` for triage
 
 > Updated based on review to clarify runtime, structure, and debug usage
