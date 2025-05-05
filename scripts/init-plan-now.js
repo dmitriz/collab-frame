@@ -2,6 +2,11 @@
  * Initialize a timeboxed work session based on the "plan-now" protocol.
  */
 function initPlanNow({ topic = "unspecified", duration = 60 }) {
+  if (typeof duration !== 'number' || duration <= 0) {
+    console.error('Error: duration must be a positive number');
+    duration = 60; // Reset to default if invalid
+  }
+
   const startTime = new Date();
   console.log(`⏳ Plan-Now session started`);
   console.log(`Topic: ${topic}`);
