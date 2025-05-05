@@ -3,9 +3,9 @@
 Use this when creating a new GitHub repository intended for clear collaboration, automation, and assistant integration.
 
 ## Initial Setup
-- [] Select a `.gitignore` template (e.g. Node, Python, etc.)
-- [] Do NOT auto-generate README.md (this will be supplied by Collab Frame)
-- [] Do NOT add license file unless explicitly needed
+- [ ] Select a `.gitignore` template (e.g. Node, Python, etc.)
+- [ ] Do NOT auto-generate README.md (this will be supplied by Collab Frame)
+- [ ] Do NOT add license file unless explicitly needed
 
 ## Repository Settings
 - [ ] Enable branch protection for the default branch (e.g., require pull request reviews, status checks, and commit signing)
