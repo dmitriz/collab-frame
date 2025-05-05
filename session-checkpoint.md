@@ -11,6 +11,6 @@ Use this midway through a deep work session, especially if you’ve been working
 ## Then Decide
 - **Continue**: Add 15–30 minutes of focused work with a defined target
 - **Wind Down**: Shift to `winding-down.md` and close loop
-- **Fork the Task**: Capture idea or intent in `plan-now.md` and reschedule
+- **Fork the Task**: Capture idea or intent in `plan-now.md` (create if needed) and reschedule
 
 > This lets you extend flow without breaking trust in your own boundaries.
