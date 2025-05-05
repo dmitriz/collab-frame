@@ -4,9 +4,9 @@ Use this file to queue small automation tasks for GitHub Copilot or your preferr
 It keeps delegation clear, frictionless, and separate from planning or vision work.
 
 ## Queued Tasks
-- [] Install Notion API script to capture database IDs
-- [] Create a README template for new tool scripts
-- [] Convert all `plan-now.md` timestamps to ISO format
+- [ ] Install Notion API script to capture database IDs
+- [ ] Create a README template for new tool scripts
+- [ ] Convert all `plan-now.md` timestamps to ISO format
 
 ## Instructions for Copilot
 - Use `scripts/` folder as output target
