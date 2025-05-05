@@ -11,4 +11,4 @@ _(most recent intentional action or file)_
 ## What Will You Do Next?
 _(exact filename, or trigger file)_
 
-> Push this note with a timestamp before resuming
+> Push this note with a timestamp (YYYY-MM-DD HH:MM) before resuming
