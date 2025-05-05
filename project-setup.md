@@ -8,6 +8,7 @@ Use this when creating a new GitHub repository intended for clear collaboration,
 - [] Do NOT add license file unless explicitly needed
 
 ## Repository Settings
+- [ ] Enable branch protection for the default branch (e.g., require pull request reviews, status checks, and commit signing)
 - [] Enable “Delete branch after merge” in Settings ✅
 - [] Enable discussions (optional) if community input is expected
 - [] Disable wikis unless you use them intentionally
