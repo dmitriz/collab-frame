@@ -5,8 +5,6 @@ Use it to recenter, recover, or delegate at any point.
 
 To use a trigger, reference its filename in your instructions or load the file directly when needed.
 
-To use a trigger, reference its filename in your instructions or load the file directly when needed.
-
 ## Behavioral Cues
 - `reset-ritual.md` – use when drifting, lost, or scattered
 - `winding-down.md` – use when nearing exit, wanting clean pause
