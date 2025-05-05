@@ -10,7 +10,7 @@ A quick mental macro to restore focus when you feel scattered, overstimulated, o
 ## 3-Step Reset
 1. Name what you were doing before you got lost
 2. Name what you need to do next (only one thing)
-3. Run `plan-now.md` or `pause` explicitly
+3. Run [plan-now.md](plan-now.md) or `pause` explicitly (take a deliberate break)
 
 ## If You’re Still Blocked
 - Run the [winding-down.md](winding-down.md) sequence
