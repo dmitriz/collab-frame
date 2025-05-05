@@ -17,4 +17,4 @@ Document tool trials, criteria, and automated scripts to minimize setup friction
 ## Open Automation Ideas
 - Use GitHub Copilot to install API scripts (ensure they are reviewed for security vulnerabilities and proper handling of API credentials)
 - Document scripts in `scripts/` folder with clear README
-- Wrap setup in `collab-init.sh` or `init.js` where possible
+- Wrap setup in `collab-init.sh` or `init.js` where possible (ensure these scripts implement input validation and run with minimal privileges to prevent exploitation)
