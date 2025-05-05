@@ -4,8 +4,8 @@ Capture review notes, personal reflections, or feedback from assistants and tool
 This keeps learning separate from execution and reduces mental clutter.
 
 ## From Reviewers
-- [] `triage_message` output schemas could use enums for type/priority
-- [] Clarify `context` structure in `generate_solution` signature
+- [ ] `triage_message` output schemas could use enums for type/priority
+- [ ] Clarify `context` structure in `generate_solution` signature
 
 ## From You
 - [] Resilience stack needs quick trigger index
