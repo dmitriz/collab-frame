@@ -1,5 +1,10 @@
 /**
- * Initialize a timeboxed work session based on the "plan-now" protocol.
+ * Starts a timeboxed work session using the "plan-now" protocol.
+ *
+ * @param {Object} [options] - Optional session configuration.
+ * @param {string} [options.topic="unspecified"] - The topic or focus of the session.
+ * @param {number} [options.duration=60] - Duration of the session in minutes.
+ * @returns {{topic: string, duration: number, startTime: Date, status: string}} An object representing the active session.
  */
 function initPlanNow({ topic = "unspecified", duration = 60 }) {
   const startTime = new Date();
