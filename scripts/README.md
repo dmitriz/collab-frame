@@ -1,35 +1,26 @@
-# Scripts Directory
+# Session Scripts
 
-Helper scripts to automate or delegate tasks via Node.js or Copilot.
+Core scripts for planning, delegating, and exiting work sessions in the `collab-frame` system.
 
-## Usage
+## Available Scripts
 
-- Node.js v18 or higher (verify with `node -v`)
+### `npm run plan-now`
 
-- (optional) Copilot CLI (see [GitHub CLI Copilot](https://github.com/github/cli#copilot))
+Starts a 45–60 minute focus session. Logs metadata to stdout.
 
-From terminal:
+### `npm run delegate-task`
 
-```bash
-# run directly
-node scripts/init-example.js
+Simulates delegating a file or task to Copilot.
 
-# or via npx if installed globally
-npx node scripts/init-example.js
-```
+### `npm run exit-cue`
 
-## Structure
+Ends a session and logs summary or time spent.
 
-- `init-` scripts: project setup or install
+## Requirements
 
-- `patch-` scripts: small migrations or fixes
+- Node.js v18+ installed
+- Copilot or GPT-enabled workflows available for delegation hooks (optional)
 
-- `debug/`: logs, tracebacks, manual captures
+## Dev Notes
 
-## Errors
-
-- Failures log to `debug/error-*.log`
-
-- Read stack trace, look for missing files/or inputs
-
-- Copy log to `<repo-root>/copilot-errors.md` and reference an existing issue template (e.g., "bug-report") for structured triage
+These scripts are invoked manually or by Copilot. Logs are standard console output for now.
