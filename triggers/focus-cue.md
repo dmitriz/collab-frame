@@ -10,6 +10,6 @@ Use before starting a block, after context switches, or when you notice wanderin
 
 ## Micro-Trigger
 _"This is my intent file."_
-_"I’m executing, not configuring."_
+_"I'm executing, not configuring."_
 
-> Rerun as often as needed. This is not a decision aid, it’s a re-centering anchor
+> Rerun as often as needed. This is not a decision aid, it's a re-centering anchor.
