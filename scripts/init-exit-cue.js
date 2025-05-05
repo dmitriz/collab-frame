@@ -2,6 +2,11 @@
  * Gracefully exit a focus block or task session.
  */
 function initExitCue({ summary = "", timeSpent = null }) {
+  if (timeSpent !== null && (typeof timeSpent !== 'number' || timeSpent < 0)) {
+    console.error('Error: timeSpent must be a positive number');
+    timeSpent = null;
+  }
+
   const endTime = new Date();
   console.log(`✅ Exit cue triggered`);
   console.log(`Session ended at: ${endTime.toISOString()}`);
