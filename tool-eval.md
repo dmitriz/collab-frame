@@ -13,6 +13,7 @@ Used to track API-based trials, quick exits, and automation friction from tools.
 - UI setup time under 10 minutes
 - Payment required? (note upfront)
 - Does integration deliver value vs manual flow?
+- Security and data privacy considerations
 
 ## Helper Script Available?
 - Add link to `scripts/` file
