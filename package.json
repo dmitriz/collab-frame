@@ -8,7 +8,10 @@
     "delegate-task": "node scripts/init-copilot-delegate.js",
     "exit-cue": "node scripts/init-exit-cue.js"
   },
-  "keywords": [],
+  "keywords": ["session-management", "productivity", "automation"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
