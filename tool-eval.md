@@ -18,5 +18,7 @@ Used to track API-based trials, quick exits, and automation friction from tools.
 ## Helper Script Available?
 - Add link to `scripts/` file
 - Add install instructions for Copilot
+- Include brief description of script functionality
+- List any dependencies or prerequisites
 
 > Keep this list lean, disposable, and reusable.
