@@ -40,5 +40,10 @@ ${state.unresolvedQuestions.map(q => `- ${q}`).join('\n')}
 `.trim();
 }
 
-fs.writeFileSync(SNAPSHOT_PATH, format(state), 'utf8');
-console.log(`Snapshot written to ${SNAPSHOT_PATH}`);
+fs.writeFile(SNAPSHOT_PATH, format(state), { encoding: 'utf8', mode: 0o600 }, (err) => {
+  if (err) {
+    console.error(`Error writing snapshot: ${err.message}`);
+  } else {
+    console.log(`Snapshot written to ${SNAPSHOT_PATH}`);
+  }
+});
