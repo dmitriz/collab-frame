@@ -64,8 +64,9 @@ const argv = {
   source: args.includes('--source') ? args[args.indexOf('--source') + 1] : undefined
 };
 
-const ideaText = argv.idea;
-const source = argv.source ? `[${argv.source}] ` : '';
+-const ideaText = argv.idea;
++const ideaText = argv.text;
+ const source = argv.source ? `[${argv.source}] ` : '';
 const timestamp = new Date().toISOString();
 const entry = `- ${timestamp} ${source}${ideaText}\n`;
 
