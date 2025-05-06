@@ -1,4 +1,4 @@
-// scripts/exit.js
+// scripts/exit-queue.js
 
 const fs = require('fs');
 const path = require('path');
