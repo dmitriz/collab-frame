@@ -1,10 +1,11 @@
-# Session Queue
+## Session Queue
 
-Items offloaded during work sessions.
+### Ideas
+- 
 
----
+### Open Questions
+- 
 
-### [IDEA] - 2025-05-06 11:44:46
+### Seeds to Triage Later
 
-Test idea for the session queue
-
+- [Placeholder: Add your seed here]
