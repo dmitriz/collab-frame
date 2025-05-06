@@ -31,6 +31,10 @@ You can fork this framework, remix it, or use it as your personal collaboration 
 - [winding-down.md](resilience/winding-down.md) — To exit long deep work blocks intentionally
 - [session-checkpoint.md](session-checkpoint.md) — Mid-session course correction techniques
 
+## 📊 Collab Frame Lifecycle
+
+![Collab Frame Lifecycle](https://oaidalleapiprodscus.blob.core.windows.net/private/org-KFItbTmlHEihT3rIRhQYlsDW/user-8t3J5h4cKVoKAXdQgCGnz7yD/img-8HOQesAfAlolNHvuoOMWTRPz.png)
+
 ## How to Use This Stack
 
 1. Use [plan-now.md](plan-now.md) to frame short cycles (3 days, 3 hours, or 3 tasks)
