@@ -69,7 +69,7 @@ try {
     }
     console.log('✓ Opened catch-up.md for editing');
   } catch (error) {
-    console.log('Note: Could not open the file automatically.');
+    console.log('Note: Could not open the file automatically:', error.message);
   }
 } catch (error) {
   console.error('Error writing to catch-up file:', error.message);
