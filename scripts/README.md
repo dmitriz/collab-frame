@@ -1,35 +1,20 @@
-# Scripts Directory
+# Scripts
 
-Helper scripts to automate or delegate tasks via Node.js or Copilot.
+This directory contains local logic modules to simulate a productivity triage engine and session loop.
 
-## Usage
+## Key Concepts
 
-- Node.js v18 or higher (verify with `node -v`)
+- **Urgency + Importance**: Tasks are tagged by their urgency and priority.
+- **Freshness**: Tasks that are neglected grow in visibility.
+- **Triage**: Scores tasks using a simple model and selects one.
+- **Modes**:
+  - `routine`: prioritizes urgent work.
+  - `creative`: surfaces important, non-urgent work.
 
-- (optional) Copilot CLI (see [GitHub CLI Copilot](https://github.com/github/cli#copilot))
-
-From terminal:
+## Run
 
 ```bash
-# run directly
-node scripts/init-example.js
-
-# or via npx if installed globally
-npx node scripts/init-example.js
+node scripts/plan-now.js routine
 ```
 
-## Structure
-
-- `init-` scripts: project setup or install
-
-- `patch-` scripts: small migrations or fixes
-
-- `debug/`: logs, tracebacks, manual captures
-
-## Errors
-
-- Failures log to `debug/error-*.log`
-
-- Read stack trace, look for missing files/or inputs
-
-- Copy log to `<repo-root>/copilot-errors.md` and reference an existing issue template (e.g., "bug-report") for structured triage
+This selects your next task and begins a working block.
