@@ -1,0 +1,10 @@
+{
+  "name": "collab-frame",
+  "version": "1.0.0",
+  "description": "Collaboration framework",
+  "scripts": {
+    "start": "node scripts/init-plan-now.js",
+    "delegate": "node scripts/init-copilot-delegate.js",
+    "exit": "node scripts/exit-q.js"
+  }
+}
