@@ -46,12 +46,7 @@ let fileContent = '';
 try {
   if (fs.existsSync(CATCHUP_PATH)) {
     fileContent = fs.readFileSync(CATCHUP_PATH, 'utf8');
-    // Only add separator if the file is not empty
-    if (fileContent.trim() !== '') {
-      fileContent = separator + content;
-    } else {
-      fileContent = content;
-    }
+    fileContent = fs.existsSync(CATCHUP_PATH) ? separator + content : content;
     fs.appendFileSync(CATCHUP_PATH, fileContent);
   } else {
     fs.writeFileSync(CATCHUP_PATH, content);
