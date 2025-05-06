@@ -1,0 +1,13 @@
+{
+  "name": "collab-frame",
+  "version": "1.0.0",
+  "description": "Collaboration framework",
+  "main": "index.js",
+  "scripts": {
+    "exit": "node scripts/exit-queue.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
