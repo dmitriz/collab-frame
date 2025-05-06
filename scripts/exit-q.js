@@ -1,27 +1,13 @@
 #!/usr/bin/env node
 
 // scripts/exit-q.js
-// Minor note added for file opening behavior
+// Exit script for the session
 
 import { exec } from 'child_process';
 import os from 'os';
 
 const file = 'session-q.md';
 
-let openCommand;
-if (os.platform() === 'darwin') {
-  openCommand = `open "${file}"`;
-} else if (os.platform() === 'win32') {
-  openCommand = `start "" "${file}"`;
-} else {
-  openCommand = `xdg-open "${file}"`;
-}
-
-// ⚠️ Note: File open is best-effort. May not work in headless/server environments.
-exec(openCommand, (err) => {
-  if (err) {
-    console.error(`⚠️ Could not open file automatically. File: ${file}. Error: ${err.message}`);
-  }
 const now = new Date();
 const timestamp = now.toLocaleString('en-US', { 
   year: 'numeric',  
@@ -32,25 +18,34 @@ const timestamp = now.toLocaleString('en-US', {
   second: '2-digit'  
 });
 
-const platformOpeners = {
-  darwin: (path) => exec(`open "${path}"`, handleExecError),
-  linux: (path) => exec(`xdg-open "${path}"`, handleExecError),
-  win32: (path) => exec(`start "" "${path}"`, handleExecError),
-};
+console.log(`Exiting session at ${timestamp}`);
 
-const openFile = (path) => {
-  const opener = platformOpeners[os.platform()];
-  if (opener) {
-    opener(path);
-  } else {
-    console.error(`⚠️ Unsupported platform: ${os.platform()}`);
-  }
-};
-
+// Handle errors from exec
 const handleExecError = (err) => {
   if (err) {
     console.error(`⚠️ Could not open file automatically. File: ${file}. Error: ${err.message}`);
   }
 };
 
+// Platform-specific file opening
+const platformOpeners = {
+  darwin: (path) => exec(`open "${path}"`, handleExecError),
+  linux: (path) => exec(`xdg-open "${path}"`, handleExecError),
+  win32: (path) => exec(`start "" "${path}"`, handleExecError),
+};
+
+// Open the file using appropriate command for the OS
+const openFile = (path) => {
+  const opener = platformOpeners[os.platform()];
+  if (opener) {
+    opener(path);
+    console.log(`Opening ${path}...`);
+  } else {
+    console.error(`⚠️ Unsupported platform: ${os.platform()}`);
+  }
+};
+
+// ⚠️ Note: File open is best-effort. May not work in headless/server environments.
 openFile(file);
+
+console.log('Session exit complete.');

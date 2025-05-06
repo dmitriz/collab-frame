@@ -2,6 +2,7 @@
   "name": "collab-frame",
   "version": "1.0.0",
   "description": "Collaboration framework",
+  "type": "module",
   "scripts": {
     "start": "node scripts/init-plan-now.js",
     "delegate": "node scripts/init-copilot-delegate.js",
