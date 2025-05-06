@@ -19,7 +19,9 @@ fetch('https://api.notion.com/v1/pages', {
   body: JSON.stringify({
     parent: { database_id: DATABASE_ID },
     properties: {
-      title: [ { text: { content: "Hello from agent!" } } ]
+      "Name": {
+        title: [ { text: { content: "Hello from agent!" } } ]
+      }
     }
   })
 }).then(res => {
