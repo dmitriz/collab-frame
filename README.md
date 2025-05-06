@@ -7,6 +7,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [📊 Collab Frame Lifecycle](#-collab-frame-lifecycle)
 - [Core Documents](#core-documents)
 - [Reflective Routines](#reflective-routines)
 - [How to Use This Stack](#how-to-use-this-stack)
@@ -19,6 +20,8 @@ This repository is a modular system for resilient, reflective, and delegation-fr
 You can fork this framework, remix it, or use it as your personal collaboration stack.
 
 ## 📊 Collab Frame Lifecycle
+
+The diagram below illustrates the iterative process of collaboration within the Collab Frame system, highlighting the flow between core documents, routines, and feedback loops.
 
 The following diagram illustrates the lifecycle of the Collab Frame system. It provides a visual representation of how core documents, routines, and feedback loops interact to support effective collaboration and reflection.
 
