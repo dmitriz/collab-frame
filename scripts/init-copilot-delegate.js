@@ -1,5 +1,10 @@
 /**
- * Delegate a file or task to Copilot for automated processing.
+ * Delegates a specified file and intent to Copilot for automated handling.
+ *
+ * @param {Object} params - The delegation details.
+ * @param {string} params.file - The name of the file to delegate.
+ * @param {string} params.intent - The intended action or purpose for delegation.
+ * @returns {{file: string, intent: string, delegated: boolean}} An object confirming delegation with the original file, intent, and a delegated flag.
  */
 function initCopilotDelegate({ file, intent }) {
   if (!file) {

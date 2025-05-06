@@ -1,5 +1,10 @@
 /**
- * Gracefully exit a focus block or task session.
+ * Ends a focus block or task session and returns session details.
+ *
+ * @param {Object} [options] - Optional session details.
+ * @param {string} [options.summary] - Optional summary of the session.
+ * @param {number|null} [options.timeSpent] - Optional time spent in minutes.
+ * @returns {{ endTime: Date, summary: string, timeSpent: number|null, status: string }} An object containing the session end time, summary, time spent, and a status of "closed".
  */
 function initExitCue({ summary = "", timeSpent = null }) {
   if (timeSpent !== null && (typeof timeSpent !== 'number' || timeSpent < 0)) {
