@@ -8,8 +8,9 @@ const ANTHROPIC_HOOK = process.env.ANTHROPIC_HOOK || 'https://api.anthropic.com/
 fetch(ANTHROPIC_HOOK, {
   method: 'POST',
   headers: {
-    'Authorization': `Bearer ${ASANA_TOKEN}`,
+    'x-api-key': process.env.ANTHROPIC_API_KEY,
     'Content-Type': 'application/json'
+  }
   },
   body: JSON.stringify({
     project_id: PROJECT_ID,
