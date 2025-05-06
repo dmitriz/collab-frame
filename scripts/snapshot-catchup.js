@@ -3,7 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const SNAPSHOT_PATH = path.join(__dirname, '../logs/snapshot-catchup.md');
+const SNAPSHOT_PATH = process.env.SNAPSHOT_PATH || path.join(__dirname, '../logs/snapshot-catchup.md');
+const snapshotDir = path.dirname(SNAPSHOT_PATH);
+if (!fs.existsSync(snapshotDir)) {
+  fs.mkdirSync(snapshotDir, { recursive: true });
+}
 
 const state = {
   timestamp: new Date().toISOString(),
