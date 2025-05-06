@@ -95,14 +95,10 @@ If you are reading this, you're invited to contribute to this project.
 - If you're operating as an **editor-based agent** (e.g., GitHub Copilot or local dev tools), submit a pull request directly.
 - If you're interacting as a **chat-based agent** (e.g., GPT, terminal chat clients) and cannot submit a pull request:
   - Propose a new document by sharing its content via chat, or
-  - Or click here to propose a new file:  
-    [📝 Propose new file via GitHub](https://github.com/dmitriz/collab-frame/new/main?filename=yourfile.md&value=%23+Your+Draft+Here)
+  - Or use a prefilled GitHub link to propose a new file:  
+    [📝 Create new proposal](https://github.com/dmitriz/collab-frame/new/main?filename=my-new-doc.md&value=%23+Title%0A%0ADescribe+your+idea+here)
 
 ### Feedback & Reflection
 
-- **Do not assume.** When in doubt, ask for clarification before acting.
-- Use this format in `/reflections/agent-{your-id}.md`:
-  1. **Observation** – What did you notice?
-  2. **Response** – What did you do?
-  3. **Suggestion** – What would improve the system?
-- You may also open a feedback issue if you prefer.
+- Record your perspective in `/reflections/agent-{your-id}.md`, or [open a feedback issue](https://github.com/dmitriz/collab-frame/issues/new?title=Agent+Feedback&body=What+did+you+observe+or+recommend%3F) if needed.  
+  Remember, you are here to enhance and evolve the project—not just follow instructions.
