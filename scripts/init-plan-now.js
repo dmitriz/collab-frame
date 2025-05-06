@@ -1,33 +1,36 @@
-/**
- * Starts a timeboxed work session using the "plan-now" protocol.
- *
- * @param {Object} [options] - Optional session configuration.
- * @param {string} [options.topic="unspecified"] - The topic or focus of the session.
- * @param {number} [options.duration=60] - Duration of the session in minutes.
- * @returns {{topic: string, duration: number, startTime: Date, status: string}} An object representing the active session.
- */
-function initPlanNow({ topic = "unspecified", duration = 60 }) {
-  if (typeof duration !== 'number' || duration <= 0) {
-    console.error('Error: duration must be a positive number');
-    duration = 60; // Reset to default if invalid
+const fs = require('fs');
+const path = require('path');
+const triage = require('./_triage-next');
+
+const SESSION_LOG_PATH = path.join(__dirname, '../logs/session.md');
+const DURATION_MINUTES = 45;
+
+function startSession(task) {
+  const startTime = new Date().toLocaleString();
+  const log = [
+    `# Session Started`,
+    `**Start:** ${startTime}`,
+    `**Duration:** ${DURATION_MINUTES} minutes`,
+    `**Focus Task:**`,
+    `- Title: ${task.title}`,
+    `- Description: ${task.description || 'No description provided.'}`,
+    `- ID: ${task.id}`,
+    ``,
+    `> Stay focused on this task until the timer ends.`,
+  ].join('\n');
+
+  fs.writeFileSync(SESSION_LOG_PATH, log);
+  console.log(`Session started: ${task.title}`);
+  console.log(`Focus for ${DURATION_MINUTES} minutes. Log saved to: ${SESSION_LOG_PATH}`);
+}
+
+function main() {
+  const task = triage.selectNext(); // expects a function that returns top task
+  if (!task) {
+    console.log('No suitable task found. Exiting.');
+    return;
   }
-
-  const startTime = new Date();
-  console.log(`⏳ Plan-Now session started`);
-  console.log(`Topic: ${topic}`);
-  console.log(`Duration: ${duration} min`);
-  console.log(`Start time: ${startTime.toISOString()}`);
-
-  return {
-    topic,
-    duration,
-    startTime,
-    status: "active"
-  };
+  startSession(task);
 }
 
-if (require.main === module) {
-  initPlanNow({ topic: "focus", duration: 45 });
-}
-
-module.exports = { initPlanNow };
+main();
