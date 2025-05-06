@@ -23,13 +23,13 @@ function format(state) {
 **Timestamp**: ${state.timestamp}
 
 ### Last Focus
-- ${state.lastTask}
+${state.lastTask}
 
 ### Notes
 ${state.notes}
 
 ### Next Steps
-- ${state.nextStepHint}
+${state.nextStepHint}
 
 ### Unresolved Questions
 ${state.unresolvedQuestions.map(q => `- ${q}`).join('\n')}
