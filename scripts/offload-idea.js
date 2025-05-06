@@ -10,72 +10,75 @@
  *   node offload-idea.js --type <idea|question|seed> --text "Your text here"
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
-// Parse command line arguments
 const args = process.argv.slice(2);
-let type = 'idea'; // default type
+let type = 'idea';
 let text = '';
+const argv = yargs(hideBin(process.argv))
+  .option('type', {
+    alias: 't',
+    describe: 'Type of item',
+    choices: ['idea', 'question', 'seed'],
+    default: 'idea',
+  })
+  .option('text', {
+    alias: 'x',
+    describe: 'Text for the item',
+    type: 'string',
+    demandOption: true,
+  })
+  .option('source', {
+    alias: 's',
+    describe: 'Source of the idea',
+    type: 'string',
+  })
+  .help()
+  .argv;
 
-// Simple argument parser
-for (let i = 0; i < args.length; i++) {
-  if (args[i] === '--type' && i + 1 < args.length) {
-    type = args[i + 1];
-    i++;
-  } else if (args[i] === '--text' && i + 1 < args.length) {
-    text = args[i + 1];
-    i++;
-  } else if (!args[i].startsWith('--') && text === '') {
-    // If no explicit --text parameter but there's text, use it
-    text = args[i];
+const type = argv.type;
+const text = argv.text;
+    if (arg.startsWith('"') && arg.endsWith('"')) {
+      text = arg.slice(1, -1);
+    } else if (arg.startsWith('"')) {
+      inQuotes = true;
+      textParts = [arg.slice(1)];
+    } else if (arg.endsWith('"') && inQuotes) {
+      inQuotes = false;
+      textParts.push(arg.slice(0, -1));
+      text = textParts.join(' ');
+    } else if (inQuotes) {
+      textParts.push(arg);
+    } else if (text === '') {
+      text = arg;
+    }
   }
 }
 
-// Validate input
-if (!text) {
-  console.error('Error: No text provided. Use --text "Your idea here"');
-  process.exit(1);
-}
+const argv = {
+  idea: text,
+  type: type,
+  source: args.includes('--source') ? args[args.indexOf('--source') + 1] : undefined
+};
 
-// Validate type
-const validTypes = ['idea', 'question', 'seed'];
-if (!validTypes.includes(type)) {
-  console.warn(`Warning: Type "${type}" is not recognized. Using "idea" instead.`);
-  type = 'idea';
-}
+const ideaText = argv.idea;
+const source = argv.source ? `[${argv.source}] ` : '';
+const timestamp = new Date().toISOString();
+const entry = `- ${timestamp} ${source}${ideaText}\n`;
 
-// Paths
-const QUEUE_PATH = path.join(__dirname, '..', 'session', 'session-queue.md');
-
-// Ensure the session directory exists
-const sessionDir = path.join(__dirname, '..', 'session');
-if (!fs.existsSync(sessionDir)) {
-  fs.mkdirSync(sessionDir, { recursive: true });
-}
-
-// Get the current date and time
-const now = new Date();
-const dateString = now.toISOString().split('T')[0];
-const timeString = now.toTimeString().split(' ')[0];
-const timestamp = `${dateString} ${timeString}`;
-
-// Format the queue item
-const queueItem = `### [${type.toUpperCase()}] - ${timestamp}\n\n${text}\n\n`;
-
-// Append to session-queue.md
+const ideaFilePath = path.resolve('session/session-queue.md');
 try {
-  // Create file with header if it doesn't exist
-  if (!fs.existsSync(QUEUE_PATH)) {
-    const header = `# Session Queue\n\nItems offloaded during work sessions.\n\n---\n\n`;
-    fs.writeFileSync(QUEUE_PATH, header + queueItem);
-  } else {
-    const existingContent = fs.readFileSync(QUEUE_PATH, 'utf8');
-    const separator = existingContent.trim() !== '' ? `---\n\n` : '';
-    fs.appendFileSync(QUEUE_PATH, separator + queueItem);
-  }
-  console.log(`✓ Added ${type} to session queue`);
+  fs.appendFileSync(
+    ideaFilePath,
+    fs.existsSync(ideaFilePath)
+      ? entry
+      : `# Session Queue\n\nItems offloaded during work sessions.\n\n${entry}`
+  );
 } catch (error) {
-  console.error('Error writing to session queue:', error.message);
+  console.error('Error writing to session queue:', error);
   process.exit(1);
 }
+console.log(`✅ Idea offloaded to ${ideaFilePath}`);
