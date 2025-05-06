@@ -20,7 +20,7 @@ Support the project by investigating questions, sourcing background context, and
 ## Behavior Guidelines
 - Always cite sources, even if informal
 - Ask clarifying questions before acting on vague requests
-- Record findings in `/notes/` or as linked comments in issues
+- Record findings in appropriate documentation locations (e.g., project wiki, designated notes directory) or as linked comments in issues
 
 ## Escalation
 If a question is too broad or has multiple interpretations, request clarification via issue comment or feedback submission.
