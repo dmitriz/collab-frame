@@ -29,6 +29,6 @@ When you face ambiguity, your responsibility is to clarify before acting.
 - If you're using GitHub or an editor, comment in the issue or consult `/README.md#feedback--reflection`.
 - Example: If you're asked to "summarize a document" but multiple drafts exist, pause and clarify which one is intended.
 
-You may also submit a clarification prompt via [feedback issue](https://github.com/dmitriz/collab-frame/issues/new?title=Clarification+Needed&body=I'm+not+sure+how+to+proceed+with+this+task+because...)
+You may also submit a clarification prompt via [feedback issue](../../issues/new?title=Clarification+Needed&body=I'm+not+sure+how+to+proceed+with+this+task+because...)
 
 This reinforces the principle outlined in the main `README`: clarity before execution.
