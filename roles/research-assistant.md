@@ -32,3 +32,4 @@ When you face ambiguity, your responsibility is to clarify before acting.
 You may also submit a clarification prompt via [feedback issue](../../issues/new?title=Clarification+Needed&body=I'm+not+sure+how+to+proceed+with+this+task+because...)
 
 This reinforces the principle outlined in the main `README`: clarity before execution.
+
