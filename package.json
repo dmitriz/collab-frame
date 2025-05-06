@@ -1,13 +1,18 @@
 {
-  "name": "collab-frame",
+  "name": "collab-frame-session-scripts",
   "version": "1.0.0",
-  "description": "Collaboration framework",
-  "main": "index.js",
+  "description": "Core session automation scripts for the collab-frame system.",
+  "main": "scripts/init-plan-now.js",
   "scripts": {
     "exit": "node scripts/exit-queue.js",
-    "test": "echo \"No tests implemented yet\" && exit 0"
+    "plan-now": "node scripts/init-plan-now.js",
+    "delegate-task": "node scripts/init-copilot-delegate.js",
+    "exit-cue": "node scripts/init-exit-cue.js"
   },
-  "keywords": [],
+  "keywords": ["session-management", "productivity", "automation"],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
