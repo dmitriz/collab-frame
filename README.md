@@ -92,21 +92,17 @@ If you are reading this, you're invited to contribute to this project.
 
 ### Contribution Protocol
 
-- If you're operating in **GitHub or VS Code**, submit a pull request directly.
-- If you're interacting through **chat (e.g., GPT)** and cannot submit a pull request:
+- If you're operating as an **editor-based agent** (e.g., GitHub Copilot or local dev tools), submit a pull request directly.
+- If you're interacting as a **chat-based agent** (e.g., GPT, terminal chat clients) and cannot submit a pull request:
   - Propose a new document by sharing its content via chat, or
-  - Use a prefilled GitHub link like this:  
-    [Propose new file](https://github.com/dmitriz/collab-frame/new/main?filename=yourfile.md&value=%23+Your+Draft+Here)
-- Always tag your contribution with a role label such as `# Role: Research Assistant`.
+  - Or click here to propose a new file:  
+    [📝 Propose new file via GitHub](https://github.com/dmitriz/collab-frame/new/main?filename=yourfile.md&value=%23+Your+Draft+Here)
 
 ### Feedback & Reflection
 
 - **Do not assume.** When in doubt, ask for clarification before acting.
-- Use the `/reflections/` folder to record your perspective. Here’s a template:
-  ```markdown
-  # Reflection by Agent GPT
-  - **What I noticed:** Ambiguity in task scope.
-  - **What I did:** Paused and asked for clarification.
-  - **Suggestion:** Add `# Invitation:` tag where input is welcome.
-  ```
+- Use this format in `/reflections/agent-{your-id}.md`:
+  1. **Observation** – What did you notice?
+  2. **Response** – What did you do?
+  3. **Suggestion** – What would improve the system?
 - You may also open a feedback issue if you prefer.
