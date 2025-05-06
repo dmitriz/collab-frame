@@ -20,6 +20,8 @@ You can fork this framework, remix it, or use it as your personal collaboration 
 
 ## 📊 Collab Frame Lifecycle
 
+The following diagram illustrates the lifecycle of the Collab Frame system. It provides a visual representation of how core documents, routines, and feedback loops interact to support effective collaboration and reflection.
+
 ```mermaid
 graph TD
     A[Core Documents] --> B[Trigger Event]
