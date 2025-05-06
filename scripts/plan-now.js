@@ -12,10 +12,10 @@ async function run(mode = 'routine') {
     return;
   }
 
-  const log = `Starting task: #${next.number} - ${next.title} (${mode})\nEstimated: 45 minutes`;
+  const sanitizedTitle = String(next.title).replace(/[\r\n]/g, ' ');
+  const log = `Starting task: #${next.number} - ${sanitizedTitle} (${mode})\nEstimated: 45 minutes`;
   console.log(log);
-
-  fs.writeFileSync('./session-log.txt', log);
+  await fs.promises.writeFile('./session-log.txt', log);
 }
 
 run(process.argv[2]); // mode: routine or creative
