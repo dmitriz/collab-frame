@@ -77,9 +77,10 @@ const timestamp = `${dateString} ${timeString}`;
 const entry = `- [${type.toUpperCase()}] ${timestamp} ${source}${ideaText}\n`;
 
 const ideaFilePath = path.resolve('session/session-queue.md');
-try {
-  fs.appendFileSync(
-    ideaFilePath,
+const existingContent = fs.readFileSync(QUEUE_PATH, 'utf8');
+const needsSeparator = existingContent.trim() !== '' && !existingContent.trim().endsWith('---');
+const separator = needsSeparator ? `---\n\n` : '';
+fs.appendFileSync(QUEUE_PATH, separator + queueItem);
     fs.existsSync(ideaFilePath)
       ? entry
       : `# Session Queue\n\nItems offloaded during work sessions.\n\n${entry}`
