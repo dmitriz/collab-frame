@@ -4,6 +4,7 @@
   "description": "Core session automation scripts for the collab-frame system.",
   "main": "scripts/init-plan-now.js",
   "scripts": {
+    "exit": "node scripts/exit-queue.js",
     "plan-now": "node scripts/init-plan-now.js",
     "delegate-task": "node scripts/init-copilot-delegate.js",
     "exit-cue": "node scripts/init-exit-cue.js"
