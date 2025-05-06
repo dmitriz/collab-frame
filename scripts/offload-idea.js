@@ -67,8 +67,14 @@ const argv = {
 -const ideaText = argv.idea;
 +const ideaText = argv.text;
  const source = argv.source ? `[${argv.source}] ` : '';
-const timestamp = new Date().toISOString();
-const entry = `- ${timestamp} ${source}${ideaText}\n`;
+// Format timestamp as YYYY-MM-DD HH:MM:SS
+const now = new Date();
+const dateString = now.toISOString().split('T')[0];
+const timeString = now.toTimeString().split(' ')[0];
+const timestamp = `${dateString} ${timeString}`;
+
+// Include the type in the entry
+const entry = `- [${type.toUpperCase()}] ${timestamp} ${source}${ideaText}\n`;
 
 const ideaFilePath = path.resolve('session/session-queue.md');
 try {
