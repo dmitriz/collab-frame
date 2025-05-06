@@ -1,28 +1,21 @@
+// scripts/exit.js
+
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
 
-const FILE_PATH = path.join(__dirname, '../session/queue.md');
+const SESSION_DIR = path.join(__dirname, '../session');
+const SESSION_PATH = path.join(SESSION_DIR, 'queue.md');
 
-const content = `# Session Queue
-
-> Exited at ${new Date().toLocaleString()}
-
-- What was I working on?
-- What's next?
-- Any blockers?
-- Notes or context?
-
-`;
-
-const dir = path.dirname(FILE_PATH);
-if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(SESSION_DIR)) {
+  fs.mkdirSync(SESSION_DIR, { recursive: true });
 }
 
-fs.writeFileSync(FILE_PATH, content);
+// Write a simple exit message
+const now = new Date().toLocaleString();
+const content = `# Session Exit\n\nExited at ${now}\n\n- [ ] Summarize what happened\n- [ ] List open threads or follow-ups\n`;
 
-console.log(`Session exit complete. Notes written to: ${FILE_PATH}`);
+fs.writeFileSync(SESSION_PATH, content, 'utf8');
 
-// Attempt to open (may silently fail)
-exec(`xdg-open "${FILE_PATH}" || open "${FILE_PATH}" || true`);
+console.log(`\nSession exit complete.`);
+console.log(`Session data saved to: ${SESSION_PATH}`);
+console.log(`To open it, run:\n  code ${SESSION_PATH}\n`);

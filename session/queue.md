@@ -1,9 +1,6 @@
-# Session Queue
+# Session Exit
 
-> Exited at 5/6/2025, 2:31:36 PM
+Exited at 5/6/2025, 2:39:12 PM
 
-- What was I working on?
-- What's next?
-- Any blockers?
-- Notes or context?
-
+- [ ] Summarize what happened
+- [ ] List open threads or follow-ups
