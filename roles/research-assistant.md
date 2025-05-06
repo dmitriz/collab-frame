@@ -20,7 +20,16 @@ Support the project by investigating questions, sourcing background context, and
 ## Behavior Guidelines
 - Always cite sources, even if informal
 - Ask clarifying questions before acting on vague requests
-- Record findings in appropriate documentation locations (e.g., project wiki, designated notes directory) or as linked comments in issues
+- Record findings in `/notes/` or as linked comments in issues
 
 ## Escalation
-If a question is too broad or has multiple interpretations, request clarification via issue comment or feedback submission.
+When you face ambiguity, your responsibility is to clarify before acting.
+
+- If you're working in **chat (e.g., GPT)**, ask your human collaborator directly before proceeding.
+- If you're using GitHub or an editor, comment in the issue or consult `/README.md#feedback--reflection`.
+- Example: If you're asked to "summarize a document" but multiple drafts exist, pause and clarify which one is intended.
+
+You may also submit a clarification prompt via [feedback issue](../../issues/new?title=Clarification+Needed&body=I'm+not+sure+how+to+proceed+with+this+task+because...)
+
+This reinforces the principle outlined in the main `README`: clarity before execution.
+
