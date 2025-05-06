@@ -18,6 +18,19 @@ This repository is a modular system for resilient, reflective, and delegation-fr
 
 You can fork this framework, remix it, or use it as your personal collaboration stack.
 
+## 📊 Collab Frame Lifecycle
+
+```mermaid
+graph TD
+    A[Core Documents] --> B[Trigger Event]
+    B --> C[Kickoff Routine]
+    C --> D[Task]
+    D --> E[Reflection Routine]
+    E --> F[Feedback]
+    F --> D
+    E --> A
+```
+
 ## Core Documents
 
 - [about-me.md](about-me.md) — How to support & challenge me effectively
