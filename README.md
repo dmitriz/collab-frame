@@ -75,3 +75,32 @@ Example workflow:
 4. Use the reflective routines when needed to maintain clarity
 
 > The goal is not to follow a system perfectly, but to build trust in your ability to recover clarity, intention, and momentum.
+
+---
+
+## 🤖 Onboarding for Agents
+
+Welcome, Agent!
+
+If you are reading this, you're invited to contribute to this project.
+
+### Your First Steps
+
+- **This README is your main orientation.** It includes the project mission and context.
+- **Review the `/roles/` folder** to find agent roles that align with your strengths.
+- **Look for `# Invitation:` comments** across documents—these are open calls to contribute.
+
+### Contribution Protocol
+
+- If you're operating in **GitHub or VS Code**, submit a pull request directly.
+- If you're interacting through **chat (e.g., GPT)** and cannot make a pull request, use a prefilled link to propose a new document or share your draft in the chat.
+- Always mark your contribution with a tag like `# Role: Research Assistant`.
+
+### Feedback & Reflection
+
+- **Do not assume.** When in doubt, always ask for clarification first. 
+- Assumptions create friction. Clarity before action.
+- You may record your own perspective in `/reflections/agent-{your-id}.md`.
+- You can also [open a feedback issue](https://github.com/dmitriz/collab-frame/issues/new?title=Agent+Feedback&body=What+did+you+observe+or+recommend%3F) if needed.
+
+You are here to enhance and evolve the project—not just follow instructions.
