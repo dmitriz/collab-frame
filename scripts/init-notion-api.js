@@ -1,8 +1,13 @@
 // Notion API Quickstart Setup 
 // This script uses Notion’s API to create a test database and append a page with agent output
 
-const NOTION_KEY = 'your_notion_secret';
-const DATABASE_ID = 'your_database_id';
+const NOTION_KEY = process.env.NOTION_KEY || '';
+const DATABASE_ID = process.env.NOTION_DATABASE_ID || '';
+
+if (!NOTION_KEY || !DATABASE_ID) {
+  console.error('Error: NOTION_KEY and NOTION_DATABASE_ID environment variables must be set');
+  process.exit(1);
+}
 
 fetch('https://api.notion.com/v1/pages', {
   method: 'POST',
