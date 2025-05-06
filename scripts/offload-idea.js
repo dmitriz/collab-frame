@@ -70,7 +70,9 @@ try {
     const header = `# Session Queue\n\nItems offloaded during work sessions.\n\n---\n\n`;
     fs.writeFileSync(QUEUE_PATH, header + queueItem);
   } else {
-    fs.appendFileSync(QUEUE_PATH, `---\n\n${queueItem}`);
+    const existingContent = fs.readFileSync(QUEUE_PATH, 'utf8');
+    const separator = existingContent.trim() !== '' ? `---\n\n` : '';
+    fs.appendFileSync(QUEUE_PATH, separator + queueItem);
   }
   console.log(`✓ Added ${type} to session queue`);
 } catch (error) {
