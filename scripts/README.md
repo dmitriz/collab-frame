@@ -1,26 +1,20 @@
-# Session Scripts
+# Scripts
 
-Core scripts for planning, delegating, and exiting work sessions in the `collab-frame` system.
+This directory contains local logic modules to simulate a productivity triage engine and session loop.
 
-## Available Scripts
+## Key Concepts
 
-### `npm run plan-now`
+- **Urgency + Importance**: Tasks are tagged by their urgency and priority.
+- **Freshness**: Tasks that are neglected grow in visibility.
+- **Triage**: Scores tasks using a simple model and selects one.
+- **Modes**:
+  - `routine`: prioritizes urgent work.
+  - `creative`: surfaces important, non-urgent work.
 
-Starts a 45–60 minute focus session. Logs metadata to stdout.
+## Run
 
-### `npm run delegate-task`
+```bash
+node scripts/plan-now.js routine
+```
 
-Simulates delegating a file or task to Copilot.
-
-### `npm run exit-cue`
-
-Ends a session and logs summary or time spent.
-
-## Requirements
-
-- Node.js v18+ installed
-- Copilot or GPT-enabled workflows available for delegation hooks (optional)
-
-## Dev Notes
-
-These scripts are invoked manually or by Copilot. Logs are standard console output for now.
+This selects your next task and begins a working block.

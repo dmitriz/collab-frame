@@ -1,4 +1,4 @@
-## Session Snapshot - {{date}}
+## Catch-Up Snapshot - {{date}}
 
 ### What I accomplished
 
@@ -7,4 +7,3 @@
 ### Next steps
 
 ### Notes
-
