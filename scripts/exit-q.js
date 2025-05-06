@@ -39,7 +39,12 @@ const openFile = (path) => {
   const opener = platformOpeners[os.platform()];
   if (opener) {
     opener(path);
-    console.log(`Opening ${path}...`);
+    exec(`open "${path}"`, (err) => {
+      handleExecError(err);
+      if (!err) {
+        console.log(`Opening ${path}...`);
+      }
+    });
   } else {
     console.error(`⚠️ Unsupported platform: ${os.platform()}`);
   }
