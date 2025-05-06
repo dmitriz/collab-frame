@@ -1,5 +1,6 @@
 # 🧩 Session Snapshot Template
-
+This file captures the current session state to enable fast catch-up later.
+> SECURITY NOTICE: Ensure that no sensitive credentials or personal data are recorded in this snapshot.
 This file captures the current session state to enable fast catch-up later.
 
 ## ⏱ Timestamp  
