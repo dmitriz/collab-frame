@@ -37,7 +37,7 @@ This file defines a behavioral contract for AI assistants participating in colla
 
 ### AI Execution Constraints
 
-- All input prompts must be written in `.md` files.
+- Prefer input prompts to be documented and version-controlled in `.md` files; other structured input methods are permissible if they are traceable and align with automation goals.
 - All outputs must be written to `.md` or `.json` files in traceable folders.
 - No AI action may modify or interact with source unless in sandbox or scoped write area.
 - No direct mutation of repo contents unless through reviewed, explicit commands.
