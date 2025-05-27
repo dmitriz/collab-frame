@@ -101,7 +101,7 @@ This document captures the current strategic state of an evolving AI assistant e
 
 ## Task Backlog (Strategic Capture)
 
-- [ ] **Define and maintain a central index of roles** *(Foundational: required for effective delegation and coordination)*
+- [ ] **Establish and populate the central index of roles** *(Foundational: required for effective delegation and coordination)*
 - [ ] **Establish an update protocol for this document** *(Ensures system-wide alignment as the ecosystem evolves)*
 - [ ] **Document and apply project hygiene principles** *(Supports role clarity and reduces system noise)*
 - [ ] **Create and integrate the Health Assistant** *(Enables transition of self-care duties from Orchestrator)*
