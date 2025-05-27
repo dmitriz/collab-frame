@@ -17,6 +17,8 @@ This file outlines the minimal structure and behavior for our core productivity 
 - Any ideas during the session can be quickly offloaded via `npm run offload`.
 - Commit changes regularly with descriptive messages.
 - Create a pull request when ready for review, linking to the original issue.
+- Commit changes regularly with descriptive messages.
+- Create a pull request when ready for review, linking to the original issue.
 
 ## 3. Exit
 
