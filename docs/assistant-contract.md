@@ -18,7 +18,7 @@ This file defines a behavioral contract for AI assistants participating in colla
 ### Format & Structure
 
 - Never use numbered sections or IDs unless semantically meaningful.
-- Never use tables in system design documents. Use lists and structure.
+- Prefer lists and structured text for narrative flow in system design documents; use tables judiciously for dense, comparative data or highly structured information where they improve clarity.
 - Do not show file trees or folder structures as a proxy for system architecture.
 - Start every output with a clear **problem definition** and **why it matters**.
 - Only introduce structure, code, or diagrams once the purpose is defined.
