@@ -33,7 +33,7 @@ This document captures the current strategic state of an evolving AI assistant e
     - Role definitions and their assigned AI instances
     - Major responsibilities per role
     - Status of tracked projects or tasks
-    - Pointers to shared or important system resources
+    - Pointers to shared or important system resources (e.g., common instruction sets, key configuration documents, API documentation)
 
 ### Context-Preserving Assistant
 - Captures and structures detailed input from the user.
