@@ -22,7 +22,8 @@ This file outlines the minimal structure and behavior for our core productivity 
 
 - Records session completion.
 - Posts summary or comment to the same issue (optional).
-- Prepares context for smooth reentry next time.
+- Saves current state and progress to a local cache file.
+- Bookmarks your position in the codebase for immediate resumption next session.
 
 ## 4. Optional: Offload Ideas
 
