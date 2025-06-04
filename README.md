@@ -9,6 +9,7 @@
 - [Overview](#overview)
 - [📊 Collab Frame Lifecycle](#-collab-frame-lifecycle)
 - [Core Documents](#core-documents)
+- [Advanced Collaboration Frameworks](#advanced-collaboration-frameworks)
 - [Reflective Routines](#reflective-routines)
 - [How to Use This Stack](#how-to-use-this-stack)
 - [Getting Started](#getting-started)
@@ -42,6 +43,10 @@ graph TD
 - [plan-now.md](plan-now.md) — Short-term focus window for immediate priorities
 - [vision.md](vision.md) — Longer-term ambitions and project direction
 - [intent.md](intent.md) — Why this system exists and its guiding principles
+
+## Advanced Collaboration Frameworks
+
+- [advanced-agent-orchestration.md](advanced-agent-orchestration.md) — Multi-agent coordination and orchestration patterns for complex collaborative workflows
 
 ## Reflective Routines
 
